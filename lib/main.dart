@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'pages/home.page.dart';
 import 'pages/login.page.dart';
 import 'pages/register.page.dart';
+import 'utils/routes.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,12 +20,12 @@ class MyApp extends StatelessWidget {
       initialRoute: "/login",
       routes: {
         "/" :(context) => HomePage(),
-        "/login" :(context) => LoginPage(),
-        "/register" :(context) => RegisterPage(),
+        MyRoutes.Login :(context) => LoginPage(),
+        MyRoutes.Register :(context) => RegisterPage(),
 
       },
       theme: ThemeData(
-        primarySwatch: Colors.purple,
+        primarySwatch: Colors.indigo,
         fontFamily: GoogleFonts.lato().fontFamily
       ),
 
